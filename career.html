@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to css stylesheet -->
+    <link rel="stylesheet" href = "style.css">
+    <title>Car Rental</title>
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+  <style>
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    .careers h2 {
+        color: #FFD700;
+        text-align: center;
+    }
+    .intro {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .job-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .job-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .job-item img {
+        width: 150px;
+        margin-right: 1.5rem;
+        border-radius: 10px;
+    }
+    .job-item h3 {
+        margin-top: 0;
+    }
+    .job-item p {
+        margin-bottom: 1rem;
+    }
+    .btn {
+        background-color: #FFD700;
+        color: #000;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        margin-top: 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+        background-color: #333;
+        color: #fff;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem 0;
+        text-align: center;
+    }
+    footer .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 1rem;
+    }
+    footer .footer-content div {
+        flex: 1 1 200px;
+        margin: 1rem;
+    }
+    footer .footer-content h4 {
+        border-bottom: 2px solid #FFD700;
+        padding-bottom: 0.5rem;
+    }
+    footer .footer-content ul {
+        list-style: none;
+        padding: 0;
+    }
+    footer .footer-content ul li {
+        margin: 0.5rem 0;
+    }
+    footer .footer-content ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .subscription input[type="email"] {
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        width: 80%;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+    .subscription input[type="submit"] {
+        padding: 0.5rem 1rem;
+        background-color: #00c853;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .subscription input[type="submit"]:hover {
+        background-color: #009624;
+    }
+    .social-icons a {
+        margin: 0 0.5rem;
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    .social-icons a:hover {
+        color: #FFD700;
+    }
+    .career-benefits {
+        background-color: #fff;
+        padding: 2rem;
+        margin: 2rem 0;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+    .career-benefits h3 {
+        color: #FFD700;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .career-benefits ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    .career-benefits ul li {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+</style>
+  
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <a href="#" class="logo"><img src="img/jeep.png" alt="Car Rental"></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Project Gallery</a></li>
+            <li><a href="partner.html">Partner</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="referencd.html">Reference</a></li>
+        </ul>
+
+        <div class="header-btn">
+            <a href="#" class="sign-up">Sign Up</a>
+            <a href="#" class="sign-in">Sign In</a> 
+        </div>
+    </header >
+
+
+    <div class="container">
+        <section id="careers" class="careers">
+            <h2>Join Our Team</h2>
+            <div class="intro">
+                <p>At SYDNEY Rental Car, we are always looking for dedicated and talented individuals to join our team. Explore our job openings and find the perfect position for you.</p>
+            </div>
+            <div class="job-item">
+                <img src="cleaner.jpg" alt="Cleaner">
+                <div>
+                    <h3>Cleaner</h3>
+                    <p>We are looking for diligent and detail-oriented cleaners to join our team. Responsibilities include cleaning the interior and exterior of vehicles, maintaining cleanliness standards, and ensuring customer satisfaction.</p>
+                    <button class="btn">Apply Now</button>
+                </div>
+            </div>
+            <div class="job-item">
+                <img src="driver.jpg" alt="Driver">
+                <div>
+                    <h3>Driver</h3>
+                    <p>We are seeking reliable and experienced drivers to transport rental vehicles between locations and to customers. Must have a valid driver’s license, a clean driving record, and excellent customer service skills.</p>
+                    <button class="btn">Apply Now</button>
+                </div>
+            </div>
+            <div class="job-item">
+                <img src="customerservice.jpg" alt="Customer Service Representative">
+                <div>
+                    <h3>Customer Service Representative</h3>
+                    <p>We are in need of friendly and professional customer service representatives to assist our clients with their rental needs. Responsibilities include answering inquiries, managing reservations, and resolving issues.</p>
+                    <button class="btn">Apply Now</button>
+                </div>
+            </div>
+            <div class="career-benefits">
+                <h3>Why Work With Us?</h3>
+                <ul>
+                    <li>Competitive Salaries</li>
+                    <li>Comprehensive Health Benefits</li>
+                    <li>Career Growth Opportunities</li>
+                    <li>Friendly Work Environment</li>
+                    <li>Employee Discounts on Car Rentals</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+			<div class="footer-content">
+				<ul class="footer-content-1">
+					<li><span>Sydney CAR</span>Rental</li>
+					<li>
+						We offer a wide range of vehicles to suit all your driving needs, ensuring we have the perfect car for you.
+					</li>
+					<li><a href="https://business.whatsapp.com"><i class="fa-solid fa-phone"></i> &nbsp; (049) 3 -456-123</a></li>
+					<li><a href="https://gmail.com"><i class="fa-solid fa-envelope"></i>&nbsp; sydneycarrental@gmail.com</a></li>
+					<li>
+						<a href="https://facebook.com"><img src="../images/social-media/facebook.png" alt="Facebook Icon"></a>
+						<a href="https://instragram.com"><img src="../images/social-media/instragram.jpeg" alt="instragram Icon"></a>
+						<a href="https://twitter.com"><img src="../images/social-media/WhatsApp.png" alt="whatsapp Icon"></a>
+						<a href="https://twitter.com"><img src="../images/social-media/twitter.png" alt="Twitter Icon"></a>	
+					</li>
+				</ul>
+				<ul class="footer-content-2">
+					<li>Locations</li>
+					<li><a href="#">Sydney</a></li>
+					<li><a href="#">Melbourne</a></li>
+					<li><a href="#">Brisbane</a></li>
+					<li><a href="#">Perth</a></li>
+					<li><a href="#">Adelaide</a></li>
+					<li><a href="#">Canberra</a></li>
+					<li><a href="#">Hobart</a></li>
+					<li><a href="#">Darwin</a></li>
+				</ul>
+				<ul class="footer-content-2">
+					<li>WORKING HOURS</li>
+					<li>WeekDay: 9:00AM - 5:00PM</li>
+					<li>WeekEnd: 10:00AM - 7:00PM</li>
+					<li>Public Holiday: Closed</li>
+				</ul>
+				<ul class="footer-content-2">
+					<li>SUBSCRIPTION</li>
+					<li>
+						<p>Subscribe your Email address for latest news &amp; updates.</p>
+					</li>
+					<li><input type="email" placeholder="Enter Email Address"></li>
+					<li><button class="submit-email">Submit</button></li>
+				</ul>
+			</div>
+			<div>
+				<img src="../images/footer/icon-playstore.jpg">
+				<img src="../images/footer/icon-appstore.png">
+			</div>
+		</div>
+		<center>
+			&copy; 2024 Sydney Car Rental Services. All rights reserved. Design by WPDD Student 2024 T1
+		</center>
+      </footer>
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- link to the JavaScript file -->
+    <script src="main.js"></script>
+</body>
+</html>
+

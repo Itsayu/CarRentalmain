@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to css stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>Car Rental</title>
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <style>
+        :root {
+	--header-height: 3.5rem;
+
+	/* ======== Colors ========== */
+	/* Color mode HSL(hue, saturation, lightness) */
+	--first-color: #f2d41e;
+	--first-color-alt: #f2a81e;
+	--title-color: #fafafa;
+	--text-color: #a7abb4;
+	--text-color-light: ;
+	--white-color: #fff;
+	--body-color: #01000a;
+	--container-color: #182334;
+
+	/* ========== Fonts and Typography ============= */
+	/*  .5rem = 8px | 1rem = 16px */
+	--text-font: "Poppins", sans-serif;
+	--title-font: "Ubuntu", sans-serif;
+	--biggest-font-size: 2rem;
+	--h1-font-size: 1.5rem;
+	--h2-font-size: 1.25rem;
+	--h3-font-size: 1rem;
+	--normal-font-size: 0.938rem;
+	--small-font-size: 0.813rem;
+	--smaller-font-size: 0.75rem;
+
+	/* ======== Font Weight =========== */
+	--font-lighter: 300;
+	--font-light: 400;
+	--font-medium: 500;
+	--font-semi-bold: 600;
+
+	/* ========= Z Index =========== */
+	--z-tooltip: 10;
+	--z-fixed: 100;
+}
+
+/* Responsive Typography */
+@media screen and (min-width: 968px) {
+	:root {
+		--h1-font-size: 2.25rem;
+		--h2-font-size: 1.5rem;
+		--h3-font-size: 1.25rem;
+		--normal-font-size: 1rem;
+		--small-font-size: 0.875rem;
+		--smaller-font-size: 0.813rem;
+	}
+}
+
+/* ============== BASE ============ */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--text-font);
+	font-size: var(--normal-font-size);
+	color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+	font-weight: var(--font-semi-bold);
+	font-family: var(--title-font);
+	line-height: 1.4;
+}
+
+ul {
+	list-style: none;
+	font-family: var(--title-font);
+}
+
+a {
+	text-decoration: none;
+	font-family: var(--title-font);
+}
+
+p{
+    color: #fff;
+}
+
+
+
+/* ============== REUSABLE CSS CLASSES =============== */
+.container {
+	max-width: 1024px;
+	margin-right: 1.5rem;
+	margin-left: 1.5rem;
+    margin-block: 1rem;
+}
+
+.grid {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.section {
+	padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+	font-size: var(--h1-font-size);
+	margin-bottom: 2.5rem;
+	font-family: var(--title-font);
+}
+
+.subtitle {
+	font-size: var(--smaller-font-size);
+	color: var(--first-color);
+	padding-left: 2rem;
+	position: relative;
+	display: flex;
+	margin-bottom: 1.3rem;
+}
+
+.subtitle::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 20px;
+	height: 2px;
+	background-color: var(--first-color);
+}
+
+.main {
+	overflow: hidden;
+}
+
+
+#container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.brands_content img {
+	max-width: 20%;
+	height: auto;
+}
+
+.app_img img {
+	max-width: 20%;
+	height: auto;
+}
+
+
+/* Style displays the mobile class */
+.mobile {
+	display: inline;
+}
+
+/* Style hides the desktop class */
+.desktop {
+	display: none;
+}
+.about_description{
+  margin-bottom:2rem;
+
+}
+.heading h1 {
+	color: #ff6347;
+	font-size: 55px;
+	text-align: center;
+	margin-top: 35px;
+  }
+  *{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+	font-family:"Arial", sans-serif;
+  }
+  
+  .hero {
+	background-color: #f8f8f8;
+	overflow: hidden;
+  }
+  .container{
+display:flex;
+justify-content:center;
+align-items:center;
+width:90%;
+margin:65px auto;
+  }
+  
+  .hero-content {
+	flex: 1;
+	width: 600px;
+	margin: 0px 25px;
+	animation: fadeInUp 2s ease;
+  }
+  
+  .hero-content h2 {
+	font-size: 30px;
+	margin-bottom: 20px;
+	color: #080606;
+  }
+  
+  .hero-content p {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+	line-height: 1.5;
+	margin-bottom: 40px;
+	color: black;
+  }
+  
+  .hero-content button {
+	display: inline-block;
+	background-color: #ff4500;
+	color: #fff;
+	padding: 12px 24px;
+	border-radius: 5px;
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s ease;
+  }
+  
+  .hero-content button:hover {
+	background-color: #ff6347;
+	transform: scale(1.1);
+  }
+  
+  
+  
+  @media screen and (max-width: 768px) {
+	.heading h1 {
+	  font-size: 45px;
+	  margin-top: 30px;
+	}
+	
+	.container {
+	  width: 100%;
+	  flex-direction: column;
+	  margin: 0;
+	  padding: 0 40px;
+	}
+  
+	.hero-content {
+	  width: 100%;
+	  margin: 35px 0;
+	}
+  
+	.hero-content h2 {
+	  font-size: 30px;
+	}
+  
+	.hero-content p {
+	  font-size: 18px;
+	  margin-bottom: 20px;
+	}
+  
+	.hero-content button {
+	  font-size: 16px;
+	  padding: 8px 16px;
+	}
+  
+	
+  }
+  
+  @keyframes fadeInUp {
+	0% {
+	  opacity: 0;
+	  transform: translateY(50px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  @keyframes fadeInRight {
+	0% {
+	  opacity: 0;
+	  transform: translateX(-50px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+  
+  /* Button in Image Container */
+  .container .btn {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: #f77a13;
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+  }
+  
+  .container .btn:hover {
+	background-color: black;
+  }
+  
+.why_container{
+  background-color: var(--container-color);
+  padding:1.5rem;
+}
+.why_description{
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-size: var(--h1-font-size);
+color:var(--title-color);
+}
+.why_container span{
+  color:var(--first-color);
+}
+
+/* Style the container holding logos */
+.brands_container {
+	display: flex; /* Arrange logos horizontally */
+	flex-wrap: wrap; /* Allow logos to wrap to new lines if needed */
+	justify-content: center; /* Center logos horizontally */
+	margin: 0px ; /* Add margin for better spacing */
+  }
+  
+  /* Style each logo item */
+  .brands_content {
+	margin: 0; /* Add space between logos */
+  }
+  
+  /* Style the logo images */
+  .brands_img {
+	width: 500px; /* Adjust width as needed */
+	height: auto; /* Maintain aspect ratio */
+	object-fit: cover; /* Crop image to fit container while maintaining aspect ratio */
+	transition: transform 0.3s; /* Add hover effect (optional) */
+  }
+  
+  /* Style on hover effect (optional) */
+  .brands_img:hover {
+	transform: scale(1.1); /* Increase logo size slightly on hover */
+  }
+@media (max-width: 768px) {
+    .brands_content {
+        flex: 1 1 calc(50% - 40px); /* 2 items per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .brands_content {
+        flex: 1 1 100%; /* 1 item per row on extra small screens */
+    }
+}
+.newsletter_container{
+	display:flex;
+	flex-direction:column;
+	justify-content:CENTER;
+	align-items:center;
+	text-align:center;
+	background-color:var(--container-color);
+	padding:1.5rem 2rem 2rem 2rem !important;
+}
+.newsletter_description{
+	margin-bottom:1.5rem;
+
+}
+.newsletter_form{
+	display:flex;
+	column-gap:0.5rem;
+
+}
+.newsletter-input{
+	border:none;
+	outline:none;
+	padding:1.1rem 1rem;
+	border-radius: 0.25rem;
+	width:65%;
+	columns:var(--text-color);
+}
+.newsletter-btn{
+padding:0.75rem;
+font-size:var(--normal-font-size);
+border-radius:0.25rem;
+display:inline-flex;
+justify-content:center;
+align-items:center;
+background-color:var(--first-color);
+border:none;
+font-family:var(--title-color);
+font-weight:var(--font-semi-bold);
+cursor: pointer;
+transition: 0.3s;
+}
+.newsletter-btn:hover{
+	background-color: var(--first-color-alt);
+
+}
+.app_container{
+	background-color: var(--container-color);
+	padding:0 2rem 2rem !important;
+}
+.app-img{
+	width:70%;
+	position:relative;
+
+}
+.app_data h2{
+	margin-bottom:1.5rem;
+
+}
+.app_description{
+	margin-bottom: 2rem;
+}
+.ios-btn a,.android-btn a{
+	padding:.7rem 1.6rem;
+	color:var(--body-color);
+	font-size: var(--small-font-size);
+	font-weight: var(--font-medium);
+	display:inline flex;
+	justify-content:center;
+	align-items:center;
+	transition:0.3s;
+
+}
+.ios-btn a{
+	background-color:var(--first-color);
+	border-radius: 50px;
+	margin-bottom: 1rem;
+}
+.ios-btn a:hover{
+	background-color:var(--first-color-alt);
+}
+.android-btn a {
+	background-color:var(--title-color) ;
+	border-radius: 50px;
+}
+.android-btn a:hover {
+background-color:var(--container-color);
+color:var(--title-color);
+border:1px solid var(--title-color);
+}
+.ios-btn a img, .android-btn a img{
+	width:30px;
+	margin-right: 0.5rem;
+}
+.reviews-containers {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: hsla(192, 22%, 48%, 0.702);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(193, 124, 78, 0.872);
+    margin-top: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.review-card {
+    border-bottom: 1px solid #f33e3e;
+    padding: 20px 0;
+}
+
+.review-card:last-child {
+    border-bottom: none;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-author {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.review-rating {
+    margin: 0;
+    color: #FFD700;
+}
+
+.review-text {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #fff !important;
+}
+.information ul li a, .company ul li a{
+	font-size:var(--normal-font-size);
+	color:var(--text-color);
+	transition: 0.3s;
+	display:inline-block;
+
+}
+.information ul li a:hover,.company ul li a:hover{
+	color:var(--first-color);
+	transform: translateX(5px);
+
+}
+.information ul li, .company ul li{
+	margin-bottom: 0.8rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer_data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-box {
+        text-align: center;
+    }
+
+    .fa {
+        margin: 0.5rem;
+    }
+}
+@media   screen and (min-width: 320px) {
+.brands_container{
+	gap:2.5rem;
+}
+.why_description{
+font-size: var(--h2-font-size);
+}
+
+.newsletter-input{
+width:100%;
+}
+}
+@media screen and(min-width:576px){
+.about_data-card{
+	width:300px;
+}
+.why_container{
+	padding: 2.5rem;
+}
+.newsletter_container{
+	padding: 2rem 2.5rem 2.5rem 2.5rem;
+}
+.newsletter_form{
+	display: flex;
+	justify-content: center;
+}
+.app_container{
+	padding:0 3rem 3rem 2rem;
+}
+.app_img{
+	width:50%;
+}
+.app_btns{
+	display:grid;
+	grid-template-columns: repeat(2,max-content);
+	column-gap: 1rem;
+	justify-content: center;
+}
+.footer_data{
+	grid-template-columns: repeat(2,1fr);
+}
+}
+@media  screen and(min-width:767x){
+	.section{
+		padding: 7rem 0 2rem;
+	}
+	.about_group{
+		order:1;
+
+	}
+	.brands_container{
+		gap:4rem 8rem;
+	}
+	.why_container{
+		padding:5rem;
+
+	}
+	.why_description{
+		line-height: 1.8rem;
+
+	}
+	
+	.newsletter_data{
+		max-width:500px;
+
+	}
+	.app_container{
+		justify-content:center ;
+		align-items:center;
+		padding-bottom:0;
+		padding-top: 2rem;
+		margin-top: 2rem;
+		position:relative;
+	}
+	.app_img{
+		position:absolute;
+		right:3rem;
+		top:-9.5rem;
+		width:220px;
+	}
+	.app_data{
+	width:350px;
+	}
+	.ios-btn a, .android-btn a{
+		padding:0.6rem 1.4rem;
+	}
+}
+	
+
+	
+
+
+@media screen and (min-width: 660px) {
+/* Style specifies a horizontal display for navigation links */
+nav li {
+	display: inline;
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+	padding-left: 0;
+	padding-right: 0;
+	width: 18%;
+	white-space: nowrap;
+	border-radius: 0;
+	background-color: transparent;
+}
+}
+@media only screen and (min-width: 830px) {
+ 
+/* Style specifies width for container */ 
+#container {
+	background-color: #e3e5ed;
+}
+
+/* Style to left align header */
+header {
+	text-align: left;
+}
+
+/* Style for nav specifies a float, margin, and width */
+nav {
+	float: right;
+	margin-top: -7em;
+	margin-right: 3em;
+	margin-bottom: 0;
+	width: 65%;
+}
+
+/* Style specifies margin and padding for the unordered list within the nav */
+nav ul {
+    margin: 0;
+	padding-left: 0.50%;
+	padding-right: 0.50%;
+}
+
+/* Style for navigation list items specifies a border radius, border, margin, width, and padding */ 
+nav li {
+	margin-left: 0;
+	margin-right: 0; 
+	padding: 0;
+	width: 20%;
+}
+
+/* Style for navigation links specifies display and padding */
+nav li a {
+	display: inline-block;
+	padding: 0.7em;
+	text-shadow: 0.2em 0.1em #3D3D35;
+}
+
+/* Style rules for pseudo-classes */ 
+nav li a:link {
+	color: #FFFFFF;	
+}
+
+nav li a:visited {
+	color: #CCCCFF;	
+}
+
+nav li a:hover {
+	color: hsl(28, 84%, 52%);
+	font-style: italic;
+}
+}
+
+    </style>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <a href="#" class="logo"><img src="img/jeep.png" alt="Car Rental"></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Project Gallery</a></li>
+            <li><a href="partner.html">Partner</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="referencd.html">Reference</a></li>
+        </ul>
+
+        <div class="header-btn">
+            <a href="#" class="sign-up">Sign Up</a>
+            <a href="#" class="sign-in">Sign In</a>
+        </div>
+    </header>
+
+
+    <!-- ABOUT -->
+    <Section class="section-about" id="about">
+        <div class="about_container container grid">
+            <div class="about_group">
+                <div class="about_data">
+                    <span class="subtitle about-sub">Drive anytime, anywhere</span>
+                    <h2 class="section_title">
+                        Where you can rent and buy your cars.</h2>
+                    <p class="about_description">We have a 24/7 customer supports system wherever you go. Also, all our
+                        cars are fully insured so you don't have to worry more.</p>
+                    <section class="hero">
+                        <div class="heading">
+                            <h1>About Us</h1>
+                        </div>
+                        <div class="container">
+                            <div class="hero-content">
+                                <h2>Find Your Drive</h2>
+                                <p>
+                                    At Sydney Car Rental, we're dedicated to simplifying your travel experience. With a
+                                    focus on convenience and reliability, we offer a wide selection of vehicles to suit
+                                    every need and budget. Whether you're a local in need of temporary wheels or a
+                                    visitor eager to explore Sydney's sights, our friendly team is here to help. From
+                                    booking to drop-off, we strive to make your journey smooth and stress-free. Discover
+                                    the freedom of the open road with Sydney Car Rental.</p>
+
+                                <button class="cta-button">learn more</button>
+                            </div>
+
+
+                        </div>
+                </div>
+
+    </section>
+
+    </div>
+    </div>
+    </div>
+    </section>
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>Our Values</h2>
+                <h3><strong>MISSION:</strong> "We will ensure a stress-free car rental experience by providing superior
+                    services that cater to our customers' individual needs...always conveying the 'We Try Harder®'
+                    spirit with knowledge, caring and a passion for excellence."</h3><br>
+                <h4>
+                    <p><strong>VISION:</strong> Our core values revolve around integrity, respect, quality, teamwork,
+                        growth, profitability, and community responsibility. We uphold our commitments with unwavering
+                        honesty and professionalism, ensuring transparent communication and respect for all individuals.
+                        Our dedication to quality drives us to prioritize customer satisfaction and continuous
+                        improvement. </p>
+                </h4>
+            </div>
+        </div>
+    </div>
+    </div>
+    <section class="section why">
+        <div class="why_container container">
+            <div class="why_data">
+                <span class="subtitle">Why Sydney Rental Car?</span>
+                <p class="why_description">
+                    <span>"</span>We're the perfect plug for people who beleive in luxury and comfort.<span>Together
+                        with our customers</span>We're creating a world where people value their cars<span>"</span>
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <div class="container-fluid text-center">
+        <h2>Our Brand Partners</h2>
+        <br>
+
+
+        <section class="brands section">
+            <div class="brands_container  grid">
+                <div class="brands_content">
+                    <img src="images/genesis.webp" class="brands_img">
+                </div>
+
+                <div class="brands_content">
+                    <img src="images/mazda.jpeg" class="brands_img">
+                </div>
+
+                <div class="brands_content">
+                    <img src="images/nissan.jpeg" class="brands_img">
+                </div>
+
+                <div class="brands_content">
+                    <img src="images/toyota.png" class="brands_img">
+                </div>
+
+
+                <div class="brands_content">
+                    <img src="images/honda.png" class="brands_img">
+                </div>
+
+                <div class="brands_content">
+                    <img src="images/jag.jpeg" class="brands_img">
+                </div>
+
+                <div class="brands_content">
+                    <img src="images/fb.png" class="brands_img">
+                </div>
+
+                <div class="brands_content">
+                    <img src="images/you.png" class="brands_img">
+                </div>
+
+                <div class="brands_content">
+                    <img src="images/Bmw.jpg" class="brands_img">
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <section class="section Newsletter">
+        <div class="container newsletter_container">
+            <div class="newsletter_data">
+                <h2 class="section_title">
+                    Do you want to receive special? </h2>
+                <P Class="newsletter_description">
+                    Be the first to receive all the information about new cars via email, by simply subscribing to our
+                    mailing list.
+                </P>
+                <div class="newsletter_form">
+                    <input type="email" class="newsletter_input">
+                    <button class="newsletter-btn">Subscribe</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section app" id="app">
+        <div class="container app_container grid">
+            <div class="app_img">
+                <img src="images/app.png" alt="">
+
+            </div>
+            <div class="app_data">
+                <h2 class="section_title">
+                    Sydney Car also works on all kinds of mobile devices.
+                </h2>
+                <p class="app_description">
+                    Download the app today and enjoy steady and uninterrupted service 24/7 daily. Our app makes it easy
+                    to rent or buy your dream luxury cars.
+                </p>
+                <div class="app_btns">
+                    <div class="ios-btn">
+                        <a href="#">
+                            <img src="images/ios.png" alt="">Download for ios
+                        </a>
+                    </div>
+                    <div class="android-btn">
+                        <a href="images/play.jpg" alt="">Download for android</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews-containers">
+            <h1>Google Reviews</h1>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="images/rev1.jpg" alt="User 1" class="review-avatar">
+                    <div class="review-info">
+                        <h2 class="review-author">John Doe</h2>
+                        <p class="review-rating">★★★★★</p>
+                    </div>
+                </div>
+                <p class="review-text" style="color: #fff !important;"></p>The overall experience was good, though there was a bit of a wait. The staff
+                was helpful and courteous, making the wait more bearable. The facilities were clean and the ambiance was
+                pleasant. I would come back again despite the minor inconvenience.
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="images/rev2.jpg" alt="User 2" class="review-avatar">
+                    <div class="review-info">
+                        <h2 class="review-author">Jane Smith</h2>
+                        <p class="review-rating">★★★★☆</p>
+                    </div>
+                </div>
+                <p class="review-text">I was extremely pleased with the level of service provided. From the moment I
+                    walked in, I was greeted with a smile and made to feel welcome. The staff were attentive and went
+                    out of their way to ensure my needs were met. The environment was clean and well-maintained, adding
+                    to the overall positive experience. Highly recommend!</p>
+            </div>
+
+        </div>
+        </div>
+
+    </Section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-content-1">
+                    <li><span>Sydney CAR</span>Rental</li>
+                    <li>
+                        We offer a wide range of vehicles to suit all your driving needs, ensuring we have the perfect
+                        car for you.
+                    </li>
+                    <li><a href="https://business.whatsapp.com"><i class="fa-solid fa-phone"></i> &nbsp; (049) 3
+                            -456-123</a></li>
+                    <li><a href="https://gmail.com"><i class="fa-solid fa-envelope"></i>&nbsp;
+                            sydneycarrental@gmail.com</a></li>
+                    <li>
+                        <a href="https://facebook.com"><img src="../images/social-media/facebook.png"
+                                alt="Facebook Icon"></a>
+                        <a href="https://instragram.com"><img src="../images/social-media/instragram.jpeg"
+                                alt="instragram Icon"></a>
+                        <a href="https://twitter.com"><img src="../images/social-media/WhatsApp.png"
+                                alt="whatsapp Icon"></a>
+                        <a href="https://twitter.com"><img src="../images/social-media/twitter.png"
+                                alt="Twitter Icon"></a>
+                    </li>
+                </ul>
+                <ul class="footer-content-2">
+                    <li>Locations</li>
+                    <li><a href="#">Sydney</a></li>
+                    <li><a href="#">Melbourne</a></li>
+                    <li><a href="#">Brisbane</a></li>
+                    <li><a href="#">Perth</a></li>
+                    <li><a href="#">Adelaide</a></li>
+                    <li><a href="#">Canberra</a></li>
+                    <li><a href="#">Hobart</a></li>
+                    <li><a href="#">Darwin</a></li>
+                </ul>
+                <ul class="footer-content-2">
+                    <li>WORKING HOURS</li>
+                    <li>WeekDay: 9:00AM - 5:00PM</li>
+                    <li>WeekEnd: 10:00AM - 7:00PM</li>
+                    <li>Public Holiday: Closed</li>
+                </ul>
+                <ul class="footer-content-2">
+                    <li>SUBSCRIPTION</li>
+                    <li>
+                        <p>Subscribe your Email address for latest news &amp; updates.</p>
+                    </li>
+                    <li><input type="email" placeholder="Enter Email Address"></li>
+                    <li><button class="submit-email">Submit</button></li>
+                </ul>
+            </div>
+            <div>
+                <img src="../images/footer/icon-playstore.jpg">
+                <img src="../images/footer/icon-appstore.png">
+            </div>
+        </div>
+        <center>
+            &copy; 2024 Sydney Car Rental Services. All rights reserved. Design by WPDD Student 2024 T1
+        </center>
+    </footer>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- link to the JavaScript file -->
+    <script src="main.js"></script>
+</body>
+
+</html>
